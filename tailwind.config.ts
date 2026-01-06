@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         heading: ["Nunito", "sans-serif"],
         body: ["Open Sans", "sans-serif"],
+        serif: ["Merriweather", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
