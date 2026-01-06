@@ -1,126 +1,170 @@
-import { Play, ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle, Award, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import adriennePhoto from "@/assets/adrienne-trainer.jpg";
+
+const AFFILIATE_LINK = "https://1d2a5hsfti4w7-14z6x77-27ve.hop.clickbank.net";
 
 const AdvertorialPage = () => {
+  const handleCTAClick = () => {
+    window.open(AFFILIATE_LINK, '_blank');
+  };
+
   return (
-    <article className="py-12 md:py-20">
-      <div className="article-container">
-        {/* Article Header */}
-        <header className="mb-12">
-          <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
-            <span>January 3, 2025</span>
-            <span>•</span>
-            <span>By Sarah Mitchell</span>
-            <span>•</span>
-            <span>5 min read</span>
-          </div>
-          
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6" style={{ color: 'hsl(var(--article-heading))' }}>
-            How I Stopped Yelling at My Dog Using a Simple 5-Minute Trick (The Airplane Game)
-          </h1>
-        </header>
-
-        {/* Article Body */}
-        <div className="article-body" style={{ color: 'hsl(var(--article-text))' }}>
-          
-          {/* Section 1: Personal Introduction */}
-          <p className="drop-cap">
-            I loved my Rex, but he was destroying my house. Chewed shoes scattered across the living room. Barking at every sound — the mailman, a car door, even the wind. Pulling me down the street on walks like I was a ragdoll. I tried everything — treats, stern commands, even expensive trainers. Nothing worked. I was at my breaking point.
-          </p>
-
-          <p>
-            Every day felt like a battle. I'd come home exhausted from work, only to find another pillow torn apart or another neighbor complaining about the noise. I started dreading walks. I even started avoiding having friends over because I was embarrassed by his behavior.
-          </p>
-
-          <p>
-            I loved him — I really did — but I was starting to wonder if I'd made a terrible mistake getting a dog in the first place.
-          </p>
-
-          {/* Section 2: The Discovery */}
-          <h2 className="font-heading text-2xl md:text-3xl font-bold mt-12 mb-6" style={{ color: 'hsl(var(--article-heading))' }}>
-            Then I Discovered Something That Changed Everything
-          </h2>
-
-          <p>
-            That's when I stumbled upon the concept of <strong>Canine Neuroplasticity</strong>, developed by CPDT-KA certified trainer Adrienne Farricelli. At first, I was skeptical — another training gimmick, I thought. But something about her approach was different.
-          </p>
-
-          <p>
-            Adrienne explained that most training methods fail because they work <em>against</em> the dog's brain instead of <em>with</em> it. Traditional training focuses on suppressing bad behavior through force or treats. But dogs, like humans, have neuroplasticity — the ability to rewire their brains through specific mental exercises.
-          </p>
-
-          <blockquote>
-            "The secret isn't about being dominant or giving more treats. It's about engaging your dog's hidden intelligence through simple brain games."
-          </blockquote>
-
-          {/* Section 3: The Value Content */}
-          <h2 className="font-heading text-2xl md:text-3xl font-bold mt-12 mb-6" style={{ color: 'hsl(var(--article-heading))' }}>
-            The Secret: Mental Games, Not Force
-          </h2>
-
-          <p>
-            Here's what I learned: dogs misbehave not because they're "bad" or "stubborn" — they misbehave because they're <strong>bored</strong>. Their brains are understimulated. It's like giving a brilliant kid nothing but crayons and expecting them not to draw on the walls.
-          </p>
-
-          <p>
-            The solution? Simple brain games that take just 5-10 minutes a day. These games tap into your dog's natural problem-solving instincts and redirect that mental energy into positive behavior.
-          </p>
-
-          {/* Video Placeholder */}
-          <div className="video-placeholder">
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-              <Play className="w-8 h-8 text-primary ml-1" />
+    <article className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="border-b border-border bg-white sticky top-0 z-50">
+        <div className="wide-container py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-sm">🐕</span>
+              </div>
+              <span className="font-serif text-xl font-bold text-primary">Smart Pet Journal</span>
             </div>
-            <p className="text-muted-foreground font-medium">Watch the Demonstration Video</p>
-            <p className="text-sm text-muted-foreground mt-2">See the Airplane Game in action</p>
+            <span className="text-xs sm:text-sm text-muted-foreground hidden sm:block">Trusted by 57,000+ Dog Owners</span>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section - Video Above the Fold */}
+      <section className="py-6 sm:py-10 bg-gradient-to-b from-primary/5 to-background">
+        <div className="article-container">
+          {/* Headline */}
+          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 sm:mb-6 text-center" style={{ color: 'hsl(var(--article-heading))' }}>
+            Is Your Dog's Bad Behavior Driving You Crazy? This Simple 2-Minute "Airplane Game" Could Change Everything.
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground text-center mb-6 sm:mb-8 max-w-2xl mx-auto">
+            Watch how professional trainer Adrienne Farricelli uses simple brain games to unlock "Hidden Intelligence" and eliminate bad habits.
+          </p>
+
+          {/* Video Player - PRIMARY FOCUS */}
+          <div className="mb-4 sm:mb-6">
+            <div className="video-container">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/l9JSDHjMQco" 
+                title="Brain Training for Dogs - Airplane Game Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              />
+            </div>
           </div>
 
-          <p>
-            One of the first games Adrienne taught me was called <strong>"The Airplane Game."</strong> It sounds silly, but within the first week, I noticed Rex was calmer, more focused, and actually <em>listening</em> to me.
+          {/* Video Caption */}
+          <p className="text-sm text-muted-foreground text-center mb-6 sm:mb-8">
+            <span className="font-semibold">VIDEO:</span> Watch Adrienne demonstrate the "Airplane Game" technique.
           </p>
 
-          {/* Section 4: The Cliffhanger */}
-          <h2 className="font-heading text-2xl md:text-3xl font-bold mt-12 mb-6" style={{ color: 'hsl(var(--article-heading))' }}>
-            The Airplane Game Changed Everything
-          </h2>
-
-          <p>
-            The Airplane Game changed everything in my house. Rex stopped destroying things. The barking reduced dramatically. Walks became enjoyable again. My neighbors even commented on how much calmer he seemed.
-          </p>
-
-          <p>
-            But here's the thing — <strong>the Airplane Game is just 1 of 7 brain games</strong> in Adrienne's complete system. Each game targets a different aspect of your dog's intelligence and behavior. Together, they create a comprehensive mental workout that transforms even the most stubborn dogs.
-          </p>
-
-          <p>
-            I wish I had discovered this years ago. It would have saved me so much stress, money on trainers, and honestly — my relationship with Rex.
-          </p>
-
-          {/* Section 5: CTA */}
-          <div className="mt-12 mb-8 p-8 bg-muted/50 rounded-lg text-center">
-            <p className="text-lg mb-6">
-              If you're struggling like I was, I highly recommend watching Adrienne's official training video. She explains all 7 brain games and shows you exactly how to do them with your dog.
-            </p>
-
+          {/* Primary CTA */}
+          <div className="text-center mb-8 sm:mb-12">
             <Button 
-              size="lg" 
-              className="text-lg px-8 py-6 h-auto"
-              onClick={() => window.open('#', '_blank')}
+              onClick={handleCTAClick}
+              className="cta-button text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-6 h-auto"
             >
-              Watch the Complete Video Training
+              Get The Full 21 Brain Games Workshop Now
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-
-            <p className="text-sm text-muted-foreground mt-4">
-              Free video presentation — No credit card required
+            <p className="text-sm text-muted-foreground mt-4 flex items-center justify-center gap-2">
+              <Star className="w-4 h-4 text-accent fill-accent" />
+              Join 57,000+ happy dog owners worldwide.
             </p>
           </div>
-
-          <p className="text-center text-muted-foreground italic">
-            — Sarah Mitchell, proud dog mom to Rex
-          </p>
         </div>
-      </div>
+      </section>
+
+      {/* Article Body */}
+      <section className="py-8 sm:py-12">
+        <div className="article-container">
+          <div className="article-body" style={{ color: 'hsl(var(--article-text))' }}>
+            
+            {/* Why Traditional Training Fails */}
+            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-primary">
+              Why Most Dog Training Methods Fail
+            </h2>
+            
+            <p className="drop-cap">
+              Most dog training fails because it uses force or endless repetition. Dogs get bored, frustrated, and eventually tune out. But Adrienne's method is completely different—it focuses on <strong>neuroplasticity</strong>, engaging your dog's brain so they <em>want</em> to behave. It's not about domination; it's about communication.
+            </p>
+
+            <p>
+              When you tap into your dog's natural problem-solving instincts, something remarkable happens. Bad behaviors like barking, chewing, and pulling on the leash begin to fade away—not because you've suppressed them, but because your dog is mentally fulfilled.
+            </p>
+
+            {/* About Adrienne Section */}
+            <div className="my-8 sm:my-12 p-6 sm:p-8 bg-muted/30 rounded-2xl border border-border">
+              <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+                <div className="flex-shrink-0">
+                  <img 
+                    src={adriennePhoto} 
+                    alt="Adrienne Farricelli - CPDT-KA Certified Dog Trainer"
+                    className="w-32 h-32 sm:w-40 sm:h-40 object-cover rounded-xl shadow-lg"
+                  />
+                </div>
+                <div className="text-center sm:text-left">
+                  <h3 className="font-serif text-xl sm:text-2xl font-bold mb-2">About Adrienne Farricelli</h3>
+                  <div className="flex items-center justify-center sm:justify-start gap-2 mb-3">
+                    <Award className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-semibold text-primary">CPDT-KA Certified Professional Dog Trainer</span>
+                  </div>
+                  <p className="text-muted-foreground text-sm sm:text-base">
+                    With over 10 years of experience, Adrienne has helped thousands of dog owners transform their pets' behavior. Her work has been featured in <strong>USA Today</strong>, <strong>Every Dog Magazine</strong>, and numerous pet publications worldwide.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Problem/Solution List */}
+            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-primary">
+              What The Brain Training System Solves
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8 sm:mb-12">
+              {[
+                "Stops Excessive Barking",
+                "Eliminates Leash Pulling",
+                "Ends Destructive Chewing",
+                "Fixes Aggression Issues",
+                "Reduces Anxiety & Fear",
+                "Improves Focus & Attention"
+              ].map((item, index) => (
+                <div key={index} className="problem-item">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <blockquote>
+              "I was ready to give up on Max. After just one week of brain games, he's like a different dog. The transformation is incredible!"
+              <footer className="mt-2 text-sm not-italic">— Jennifer M., Verified Customer</footer>
+            </blockquote>
+
+            {/* Final CTA */}
+            <div className="mt-10 sm:mt-12 p-6 sm:p-8 bg-primary/5 rounded-2xl text-center border border-primary/20">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold mb-4">
+                Ready to Transform Your Dog's Behavior?
+              </h3>
+              <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
+                Get instant access to all 21 brain games, step-by-step video tutorials, and Adrienne's complete training system.
+              </p>
+              
+              <Button 
+                onClick={handleCTAClick}
+                className="cta-button text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-6 h-auto"
+              >
+                Get The Full 21 Brain Games Workshop Now
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+              
+              <p className="text-xs text-muted-foreground mt-4">
+                60-Day Money-Back Guarantee • Instant Digital Access
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
     </article>
   );
 };
