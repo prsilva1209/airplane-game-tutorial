@@ -1,12 +1,10 @@
 import { Check, X } from "lucide-react";
 
 const problems = [
-  { text: "Does your dog bark uncontrollably?", icon: "bark" },
-  { text: "Does your dog pull on the leash?", icon: "leash" },
-  { text: "Is your dog aggressive or anxious?", icon: "aggressive" },
-  { text: "Does your dog chew your furniture?", icon: "chew" },
-  { text: "Does your dog ignore your commands?", icon: "ignore" },
-  { text: "Is potty training a nightmare?", icon: "potty" },
+  { text: "Barks uncontrollably at the door?" },
+  { text: "Pulls on the leash during walks?" },
+  { text: "Chews your furniture or shoes?" },
+  { text: "Ignores your commands?" },
 ];
 
 const ProblemsSection = () => {
@@ -15,12 +13,9 @@ const ProblemsSection = () => {
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-            Do You Face Any of{" "}
-            <span className="text-primary">These Problems?</span>
+            Does Your Dog Do{" "}
+            <span className="text-primary">Any of This?</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            If you're nodding your head, you're in the right place.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
@@ -42,9 +37,9 @@ const ProblemsSection = () => {
             You are <span className="text-primary">NOT</span> alone.
           </p>
           <p className="text-lg text-muted-foreground">
-            Most dog owners face these issues because{" "}
+            Most training fails because it{" "}
             <span className="font-semibold text-foreground">
-              traditional training methods simply don't work
+              fights the dog's brain instead of engaging it
             </span>
             .
           </p>

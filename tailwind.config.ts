@@ -51,9 +51,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        navy: {
-          DEFAULT: "hsl(var(--navy))",
-          light: "hsl(var(--navy-light))",
+        "trust-blue": {
+          DEFAULT: "hsl(var(--trust-blue))",
+          light: "hsl(var(--trust-blue-light))",
         },
         orange: {
           DEFAULT: "hsl(var(--orange))",
