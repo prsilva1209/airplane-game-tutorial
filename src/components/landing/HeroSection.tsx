@@ -16,14 +16,14 @@ const HeroSection = () => {
           {/* Content */}
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight">
-                Is Your Dog's Bad Behavior{" "}
-                <span className="text-primary">Driving You Crazy?</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight">
+                Is Your Dog's Bad Behavior Causing You{" "}
+                <span className="text-primary">Stress & Embarrassment?</span>
               </h1>
               <h2 className="text-xl md:text-2xl text-muted-foreground font-medium leading-relaxed">
-                Discover How To Unlock Your Dog's{" "}
-                <span className="font-bold text-foreground">"Hidden Intelligence"</span>{" "}
-                To Eliminate Bad Behavior and Create the Obedient, Well-Behaved Pet of Your Dreams.
+                Discover the{" "}
+                <span className="font-bold text-foreground">'Hidden Intelligence' Secret</span>{" "}
+                used by Top Trainers to eliminate bad behavior without force or domination.
               </h2>
             </div>
 

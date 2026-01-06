@@ -42,7 +42,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="text-center text-background/50 text-sm space-y-4">
-            <p>© 2025 Dog Training Solutions. All Rights Reserved.</p>
+            <p>© 2025 Smart Dog Training. All Rights Reserved.</p>
             <p className="max-w-2xl text-xs">
               This site is not a part of the Facebook website or Facebook Inc.
               Additionally, This site is NOT endorsed by Facebook in any way.

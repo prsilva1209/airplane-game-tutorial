@@ -1,11 +1,11 @@
-import { Brain, Clock, Heart, Sparkles, Check } from "lucide-react";
+import { Brain, Clock, Heart, Sparkles, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const benefits = [
   {
     icon: Brain,
-    title: "Science-Based Method",
-    description: "Uses proven positive reinforcement techniques that stimulate your dog's natural intelligence.",
+    title: "Neuroplasticity-Based",
+    description: "Uses brain science to create new neural pathways for lasting behavioral change.",
   },
   {
     icon: Heart,
@@ -33,19 +33,34 @@ const SolutionSection = () => {
             THE SOLUTION
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-            Simple Brain Games That{" "}
-            <span className="text-primary">Transform Behavior</span>
+            The Solution:{" "}
+            <span className="text-primary">Neuroplasticity & Brain Games</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            The secret isn't force or punishment — it's about{" "}
-            <span className="font-semibold text-foreground">
-              stimulating your dog's mind
-            </span>{" "}
-            through fun, engaging activities that unlock their hidden intelligence.
+            Professional CPDT-KA Trainer{" "}
+            <span className="font-semibold text-foreground">Adrienne Farricelli</span>{" "}
+            has developed a unique method that unlocks your dog's natural intelligence.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+        {/* Featured Highlight */}
+        <div className="bg-primary/5 border-2 border-primary/20 rounded-2xl p-6 md:p-8 max-w-2xl mx-auto mb-12">
+          <div className="flex items-center justify-center gap-4">
+            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+              <Zap className="w-7 h-7 text-primary" />
+            </div>
+            <div className="text-left">
+              <p className="text-lg md:text-xl font-bold text-foreground">
+                Learn the famous "Airplane Game"
+              </p>
+              <p className="text-muted-foreground">
+                Discover this powerful technique inside the free video
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
           {benefits.map((benefit, index) => (
             <div
               key={index}
@@ -64,37 +79,8 @@ const SolutionSection = () => {
           ))}
         </div>
 
-        {/* Creator Card */}
-        <div className="bg-card rounded-2xl shadow-card border border-border p-8 max-w-3xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="flex-shrink-0">
-              <div className="w-24 h-24 rounded-full bg-secondary flex items-center justify-center text-4xl">
-                👩‍🏫
-              </div>
-            </div>
-            <div className="text-center md:text-left">
-              <p className="text-lg text-muted-foreground mb-2">
-                Created by <span className="font-bold text-foreground">Adrienne Farricelli</span>
-              </p>
-              <p className="text-primary font-semibold mb-3">
-                CPDT-KA Certified Professional Dog Trainer
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2 text-muted-foreground">
-                  <Check className="w-5 h-5 text-success" />
-                  10+ years of professional dog training experience
-                </li>
-                <li className="flex items-center gap-2 text-muted-foreground">
-                  <Check className="w-5 h-5 text-success" />
-                  Helped 21,000+ dog owners worldwide
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center">
           <Button variant="cta" size="xl">
             Watch the Free Video Now
           </Button>
