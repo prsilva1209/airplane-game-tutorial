@@ -43,34 +43,49 @@ const AdvertorialPage = () => {
             Watch how professional trainer Adrienne Farricelli uses simple brain games to unlock "Hidden Intelligence" and eliminate bad habits.
           </p>
 
-          {/* Video Player - PRIMARY FOCUS (Lite Embed for LCP) */}
+          {/* Video Player - CORRIGIDO E OTIMIZADO */}
           <div className="mb-4 sm:mb-6">
-            <div className="video-container">
-              {isVideoLoaded ? (
-                <iframe 
-                  src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1`}
-                  title="Brain Training for Dogs - Airplane Game Demo"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                />
-              ) : (
-                <button
+            {/* O container abaixo substitui a antiga classe 'video-container' */}
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
+              {!isVideoLoaded ? (
+                <button 
                   onClick={() => setIsVideoLoaded(true)}
-                  className="relative w-full aspect-video rounded-xl shadow-lg overflow-hidden cursor-pointer group"
-                  aria-label="Play video"
+                  className="group relative w-full h-full block cursor-pointer"
+                  aria-label="Play Video"
                 >
-                  <img
+                  {/* Imagem de Capa cobrindo tudo (object-cover) */}
+                  <img 
                     src={`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
-                    alt="Video thumbnail - Airplane Game Demo"
-                    className="w-full h-full object-cover"
+                    alt="Brain Training for Dogs Video" 
+                    className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                    loading="lazy"
                   />
-                  {/* Play Button Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                  
+                  {/* Overlay Escuro para destacar o botão */}
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
+                  
+                  {/* Botão de Play centralizado */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:bg-red-700 group-hover:scale-110 transition-all duration-300">
                       <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white fill-white ml-1" />
                     </div>
                   </div>
+                  
+                  {/* Texto Opcional de Incentivo */}
+                  <div className="absolute bottom-6 w-full text-center hidden sm:block">
+                    <span className="bg-black/60 text-white px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm border border-white/20">
+                      Click to Watch the Video
+                    </span>
+                  </div>
                 </button>
+              ) : (
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&rel=0`}
+                  title="Brain Training for Dogs"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               )}
             </div>
           </div>
