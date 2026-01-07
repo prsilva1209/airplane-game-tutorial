@@ -60,7 +60,8 @@ const AdvertorialPage = () => {
           <div className="text-center mb-8 sm:mb-12">
             <Button 
               onClick={handleCTAClick}
-              className="cta-button text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-6 h-auto"
+              variant="cta"
+              className="text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-6 h-auto"
             >
               Get The Full 21 Brain Games Workshop Now
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -151,7 +152,8 @@ const AdvertorialPage = () => {
               
               <Button 
                 onClick={handleCTAClick}
-                className="cta-button text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-6 h-auto"
+                variant="cta"
+                className="text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-6 h-auto"
               >
                 Get The Full 21 Brain Games Workshop Now
                 <ArrowRight className="ml-2 w-5 h-5" />
