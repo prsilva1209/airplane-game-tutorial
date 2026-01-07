@@ -43,17 +43,17 @@ const AdvertorialPage = () => {
             Watch how professional trainer Adrienne Farricelli uses simple brain games to unlock "Hidden Intelligence" and eliminate bad habits.
           </p>
 
-          {/* Video Player - CORRIGIDO E OTIMIZADO */}
+          {/* Video Player - VERSÃO BLINDADA MOBILE */}
           <div className="mb-4 sm:mb-6">
-            {/* O container abaixo substitui a antiga classe 'video-container' */}
             <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
               {!isVideoLoaded ? (
                 <button 
+                  type="button"
                   onClick={() => setIsVideoLoaded(true)}
                   className="group relative w-full h-full block cursor-pointer"
                   aria-label="Play Video"
                 >
-                  {/* Imagem de Capa cobrindo tudo (object-cover) */}
+                  {/* Imagem de Capa */}
                   <img 
                     src={`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
                     alt="Brain Training for Dogs Video" 
@@ -61,17 +61,17 @@ const AdvertorialPage = () => {
                     loading="lazy"
                   />
                   
-                  {/* Overlay Escuro para destacar o botão */}
+                  {/* Overlay Escuro */}
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
                   
-                  {/* Botão de Play centralizado */}
+                  {/* Botão de Play */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:bg-red-700 group-hover:scale-110 transition-all duration-300">
                       <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white fill-white ml-1" />
                     </div>
                   </div>
                   
-                  {/* Texto Opcional de Incentivo */}
+                  {/* Texto de Incentivo */}
                   <div className="absolute bottom-6 w-full text-center hidden sm:block">
                     <span className="bg-black/60 text-white px-4 py-1.5 rounded-full text-sm font-medium backdrop-blur-sm border border-white/20">
                       Click to Watch the Video
@@ -81,7 +81,7 @@ const AdvertorialPage = () => {
               ) : (
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&rel=0`}
+                  src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&rel=0&playsinline=1&mute=0`}
                   title="Brain Training for Dogs"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
