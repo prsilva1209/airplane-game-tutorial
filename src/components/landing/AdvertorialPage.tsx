@@ -1,10 +1,14 @@
-import { ArrowRight, CheckCircle, Award, Star } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, CheckCircle, Award, Star, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import adriennePhoto from "@/assets/adrienne-trainer.jpg";
 
 const AFFILIATE_LINK = "https://1d2a5hsfti4w7-14z6x77-27ve.hop.clickbank.net";
+const VIDEO_ID = "l9JSDHjMQco";
 
 const AdvertorialPage = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   const handleCTAClick = () => {
     window.open(AFFILIATE_LINK, '_blank');
   };
@@ -39,15 +43,35 @@ const AdvertorialPage = () => {
             Watch how professional trainer Adrienne Farricelli uses simple brain games to unlock "Hidden Intelligence" and eliminate bad habits.
           </p>
 
-          {/* Video Player - PRIMARY FOCUS */}
+          {/* Video Player - PRIMARY FOCUS (Lite Embed for LCP) */}
           <div className="mb-4 sm:mb-6">
             <div className="video-container">
-              <iframe 
-                src="https://www.youtube-nocookie.com/embed/l9JSDHjMQco" 
-                title="Brain Training for Dogs - Airplane Game Demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              />
+              {isVideoLoaded ? (
+                <iframe 
+                  src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1`}
+                  title="Brain Training for Dogs - Airplane Game Demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                />
+              ) : (
+                <button
+                  onClick={() => setIsVideoLoaded(true)}
+                  className="relative w-full aspect-video rounded-xl shadow-lg overflow-hidden cursor-pointer group"
+                  aria-label="Play video"
+                >
+                  <img
+                    src={`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
+                    alt="Video thumbnail - Airplane Game Demo"
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Play Button Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                      <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white fill-white ml-1" />
+                    </div>
+                  </div>
+                </button>
+              )}
             </div>
           </div>
 
