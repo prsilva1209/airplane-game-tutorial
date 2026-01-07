@@ -61,10 +61,10 @@ const AdvertorialPage = () => {
             <Button 
               onClick={handleCTAClick}
               variant="cta"
-              className="text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-6 h-auto"
+              className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-10 py-4 sm:py-5 md:py-6 h-auto w-full sm:w-auto max-w-full"
             >
               Get The Full 21 Brain Games Workshop Now
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
             </Button>
             <p className="text-sm text-muted-foreground mt-4 flex items-center justify-center gap-2">
               <Star className="w-4 h-4 text-accent fill-accent" />
@@ -153,10 +153,10 @@ const AdvertorialPage = () => {
               <Button 
                 onClick={handleCTAClick}
                 variant="cta"
-                className="text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-6 h-auto"
+                className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-10 py-4 sm:py-5 md:py-6 h-auto w-full sm:w-auto max-w-full"
               >
                 Get The Full 21 Brain Games Workshop Now
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
               </Button>
               
               <p className="text-xs text-muted-foreground mt-4">
