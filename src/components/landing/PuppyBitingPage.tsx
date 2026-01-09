@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 const AFFILIATE_URL = "https://1d2a5hsfti4w7-14z6x77-27ve.hop.clickbank.net";
 
 const painPoints = [
-  "Biting your hands, clothes, or furniture",
-  "Whining, pacing, and never settling down",
-  "Jumping on guests and family members",
-  "Acting anxious, restless, or out of control",
+  "Biting your hands, arms, and clothes",
+  "Attacking your feet when you walk",
+  "Chewing everything in the house",
+  "Ignoring commands and acting wild",
 ];
 
 const PuppyBitingPage = () => {
@@ -24,22 +24,22 @@ const PuppyBitingPage = () => {
         </div>
       </header>
 
-      {/* Hero */}
+      {/* HERO */}
       <section className="py-6 sm:py-10 px-4">
         <div className="max-w-lg mx-auto text-center">
 
-          {/* Headline */}
           <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-3">
-            My Puppy Wouldn’t Stop Biting — <strong>Until I Tried This Simple Brain Game</strong>
+            My Puppy Won’t Stop Biting Me —  
+            <br />
+            <span className="text-orange-600">And I Was About to Give Up</span>
           </h1>
 
-          {/* Subheadline */}
           <p className="text-base sm:text-lg text-muted-foreground mb-6">
-            This calm, science-based method helps reduce <strong>biting</strong>,{" "}
-            <strong>anxiety</strong>, and <strong>restless behavior</strong> — without yelling or punishment.
+            Discover the simple brain-based method that helps calm your puppy and
+            reduce painful biting — without yelling, hitting, or punishment.
           </p>
 
-          {/* Image */}
+          {/* IMAGE */}
           <a
             href={AFFILIATE_URL}
             target="_blank"
@@ -50,7 +50,7 @@ const PuppyBitingPage = () => {
 
             <img
               src="/images/puppy-biting.webp"
-              alt="Tired of getting bitten by your puppy?"
+              alt="Frustrated owner with biting puppy"
               className="w-full rounded-xl shadow-lg"
               width="700"
               height="400"
@@ -58,26 +58,37 @@ const PuppyBitingPage = () => {
             />
           </a>
 
-          {/* CTA Principal */}
-          <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer" className="block w-full">
+          {/* CTA */}
+          <a
+            href={AFFILIATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full"
+          >
             <Button
               variant="cta"
               size="xl"
               className="w-full py-4 px-4 text-sm sm:text-base md:text-lg whitespace-normal text-center leading-snug flex items-center justify-center gap-2"
             >
-              See How to Stop the Biting
+              See How to Stop the Biting Today
               <ArrowRight className="w-5 h-5 flex-shrink-0" />
             </Button>
           </a>
+
+          <p className="text-sm text-gray-600 mt-3">
+            ⭐⭐⭐⭐⭐ Trusted by <strong>57,000+ dog owners</strong> worldwide
+          </p>
+
         </div>
       </section>
 
-      {/* Pain Section */}
+      {/* PAIN POINTS */}
       <section className="py-6 px-4 bg-white">
         <div className="max-w-lg mx-auto">
           <div className="bg-orange-50/50 rounded-xl p-5 border border-orange-100">
+
             <p className="text-sm mb-4 font-medium text-center text-muted-foreground">
-              Is your puppy driving you crazy with these behaviors?
+              Does your puppy do any of these?
             </p>
 
             <ul className="space-y-3">
@@ -88,43 +99,60 @@ const PuppyBitingPage = () => {
                 </li>
               ))}
             </ul>
+
           </div>
         </div>
       </section>
 
-      {/* Bridge Text Section */}
+      {/* BRIDGE */}
       <section className="py-8 px-4 pb-16">
         <div className="max-w-lg mx-auto text-center space-y-6">
 
           <p className="text-lg leading-relaxed text-gray-800">
-            Your puppy isn’t <strong>“bad”</strong> — their brain is just <strong>overstimulated</strong>.
+            Your puppy isn’t aggressive or “bad”.
           </p>
 
           <p className="text-lg leading-relaxed text-gray-600">
-            When a puppy’s mind is overloaded with <strong className="text-gray-900">energy</strong> and{" "}
-            <strong className="text-gray-900">stress</strong>, biting becomes their way of coping.
+            Most biting happens because your puppy’s brain is
+            <strong className="text-gray-900"> overstimulated</strong>,
+            <strong className="text-gray-900"> anxious</strong>, or
+            <strong className="text-gray-900"> under-challenged</strong>.
           </p>
 
           <p className="text-lg leading-relaxed text-gray-800">
-            Professional trainer{" "}
-            <strong className="text-trust-blue">Adrienne Farricelli</strong> teaches{" "}
-            <strong>simple brain games</strong> that calm your puppy’s mind, improve focus, and{" "}
-            <strong>naturally stop problem behaviors</strong>.
+            Certified trainer{" "}
+            <strong className="text-trust-blue">Adrienne Farricelli</strong>{" "}
+            uses gentle brain games to calm your puppy, improve focus, and
+            naturally reduce biting behavior.
           </p>
 
-          <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer" className="block w-full pt-4">
-            <Button variant="cta" size="xl" className="w-full py-4 text-base shadow-lg">
-              Watch the Free Training Video
+          <a
+            href={AFFILIATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full pt-4"
+          >
+            <Button
+              variant="cta"
+              size="xl"
+              className="w-full py-4 text-base shadow-lg"
+            >
+              See How to Stop the Biting Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </a>
 
+          <p className="text-sm text-gray-600 mt-3">
+            60-Day Money-Back Guarantee – No Risk
+          </p>
+
           <p className="text-xs text-muted-foreground pt-2">
-            See how to stop the biting starting today
+            Instant access. Start calming your puppy today.
           </p>
 
         </div>
       </section>
+
     </article>
   );
 };
