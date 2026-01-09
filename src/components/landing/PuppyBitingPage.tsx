@@ -49,7 +49,7 @@ const PuppyBitingPage = () => {
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10" />
             
             <img
-              src="/images/puppy-biting.webp"
+              src="/images/puppy-biting.jpg"
               alt="Frustrated dog owner with biting puppy"
               className="w-full transform transition-transform duration-500 group-hover:scale-105"
               loading="eager" 
