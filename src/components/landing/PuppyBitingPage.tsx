@@ -60,10 +60,14 @@ const PuppyBitingPage = () => {
 
           {/* CTA Principal */}
           <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer" className="block w-full">
-            <Button variant="cta" size="xl" className="w-full py-4 text-base shadow-xl animate-pulse-subtle">
+            <Button
+            variant="cta"
+            size="xl"
+              className="w-full py-4 px-4 text-sm sm:text-base md:text-lg whitespace-normal text-center leading-snug flex items-center justify-center gap-2"
+              >
               Watch the Full Training Method
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+              <ArrowRight className="w-5 h-5 flex-shrink-0" />
+              </Button>
           </a>
         </div>
       </section>
