@@ -71,8 +71,9 @@ const PuppyBitingPage = () => {
       <section className="py-8 px-4 pb-16">
         <div className="max-w-lg mx-auto text-center space-y-6">
 
-          <p className="text-lg leading-relaxed text-gray-800">
-            Most puppies don't misbehave because they're <strong>aggressive</strong> or <strong>stubborn</strong>.
+          <p className="text-lg leading-relaxed text-gray-800">Your puppy isn’t “bad” — their brain is just overstimulated.
+
+          <strong>aggressive</strong> or <strong>stubborn</strong>.
           </p>
 
           <p className="text-lg leading-relaxed text-gray-600">
