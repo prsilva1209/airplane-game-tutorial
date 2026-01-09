@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { AlertCircle, ArrowRight, Play } from "lucide-react";
+import { AlertCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const AFFILIATE_URL = "https://1d2a5hsfti4w7-14z6x77-27ve.hop.clickbank.net";
-const VIDEO_ID = "cyaW77XIC0M";
 
 const painPoints = [
   "Biting hands and clothes",
@@ -13,8 +12,6 @@ const painPoints = [
 ];
 
 const PuppyBitingPage = () => {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
   return (
     <article className="min-h-screen bg-gradient-to-b from-orange-50/50 to-white">
       
@@ -37,53 +34,31 @@ const PuppyBitingPage = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-lg text-muted-foreground mb-5">
+          <p className="text-base sm:text-lg text-muted-foreground mb-6">
             If your puppy bites hands, clothes, or won't calm down, anxiety and excess energy may be the real cause.
           </p>
 
-          {/* Emotional Image */}
-          <img
-            src="/images/puppy-biting.webp"
-            alt="Frustrated dog owner with biting puppy"
-            className="w-full rounded-xl shadow-md mb-5"
-            loading="lazy"
-          />
+          {/* IMAGEM (Agora é o destaque principal e é clicável) */}
+          <a 
+            href={AFFILIATE_URL} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="block mb-6 group relative overflow-hidden rounded-xl shadow-lg"
+          >
+            {/* Efeito sutil ao passar o mouse para indicar clique */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10" />
+            
+            <img
+              src="/images/puppy-biting.webp"
+              alt="Frustrated dog owner with biting puppy"
+              className="w-full transform transition-transform duration-500 group-hover:scale-105"
+              loading="eager" 
+            />
+          </a>
 
-          {/* Video */}
-          <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg mb-4">
-            {!isVideoLoaded ? (
-              <button
-                onClick={() => setIsVideoLoaded(true)}
-                className="w-full h-full relative group"
-                aria-label="Play video"
-              >
-                <img
-                  src={`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
-                  alt="Dog training demonstration"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                    <Play className="w-7 h-7 text-white fill-white ml-1" />
-                  </div>
-                </div>
-              </button>
-            ) : (
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&rel=0`}
-                title="Dog training demonstration"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            )}
-          </div>
-
-          {/* CTA */}
+          {/* CTA Principal */}
           <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer" className="block w-full">
-            <Button variant="cta" size="xl" className="w-full py-4 text-base">
+            <Button variant="cta" size="xl" className="w-full py-4 text-base shadow-xl animate-pulse-subtle">
               Watch the Full Training Method
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
@@ -91,18 +66,18 @@ const PuppyBitingPage = () => {
         </div>
       </section>
 
-      {/* Pain Section */}
+      {/* Pain Section - Mantida igual */}
       <section className="py-6 px-4 bg-white">
         <div className="max-w-lg mx-auto">
-          <div className="bg-orange-50/50 rounded-xl p-5 border">
+          <div className="bg-orange-50/50 rounded-xl p-5 border border-orange-100">
             <p className="text-sm mb-4 font-medium text-center text-muted-foreground">
               Does your puppy do any of these?
             </p>
             <ul className="space-y-3">
               {painPoints.map((point, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <AlertCircle className="w-5 h-5 text-red-500" />
-                  <span className="text-base">{point}</span>
+                  <AlertCircle className="w-5 h-5 text-red-500 shrink-0" />
+                  <span className="text-base text-gray-700">{point}</span>
                 </li>
               ))}
             </ul>
@@ -110,32 +85,32 @@ const PuppyBitingPage = () => {
         </div>
       </section>
 
-      {/* Bridge */}
-      <section className="py-10 px-4">
-        <div className="max-w-lg mx-auto text-center space-y-5">
+      {/* Bridge Text Section */}
+      <section className="py-8 px-4 pb-16">
+        <div className="max-w-lg mx-auto text-center space-y-6">
 
-          <p className="text-lg">
+          <p className="text-lg leading-relaxed text-gray-800">
             Most puppies don't misbehave because they're <strong>aggressive</strong> or <strong>stubborn</strong>.
           </p>
 
-          <p className="text-lg text-muted-foreground">
-            They act out because their brain is <strong className="text-foreground">overstimulated</strong>,{" "}
-            <strong className="text-foreground">anxious</strong>, or{" "}
-            <strong className="text-foreground">under-challenged</strong>.
+          <p className="text-lg leading-relaxed text-gray-600">
+            They act out because their brain is <strong className="text-gray-900">overstimulated</strong>,{" "}
+            <strong className="text-gray-900">anxious</strong>, or{" "}
+            <strong className="text-gray-900">under-challenged</strong>.
           </p>
 
-          <p className="text-lg">
+          <p className="text-lg leading-relaxed text-gray-800">
             Professional trainer <strong className="text-trust-blue">Adrienne Farricelli</strong> uses gentle brain games to mentally engage dogs, helping them relax, focus, and naturally reduce unwanted behaviors.
           </p>
 
-          <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer" className="block w-full">
-            <Button variant="cta" size="xl" className="w-full py-4 text-base">
+          <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer" className="block w-full pt-4">
+            <Button variant="cta" size="xl" className="w-full py-4 text-base shadow-lg">
               Watch the Full Training Method
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </a>
 
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-muted-foreground pt-2">
             Free video reveals a calm, science-based approach
           </p>
 
