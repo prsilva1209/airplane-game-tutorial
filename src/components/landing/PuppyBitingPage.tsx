@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AlertCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const AFFILIATE_URL = "https://1d2a5hsfti4w7-14z6x77-27ve.hop.clickbank.net";
-const painPoints = ["Biting hands and clothes", "Whining and pacing constantly", "Jumping on people", "Restless or anxious behavior"];
+const painPoints = ["Biting your hands, clothes, or furniture", "Whining, pacing, and never settling down", "Jumping on guests and family members", "Acting anxious, restless, or out of control"];
 const PuppyBitingPage = () => {
   return <article className="min-h-screen bg-gradient-to-b from-orange-50/50 to-white">
       
