@@ -1,11 +1,20 @@
 import { useState } from "react";
 import { AlertCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const AFFILIATE_URL = "https://1d2a5hsfti4w7-14z6x77-27ve.hop.clickbank.net";
-const painPoints = ["Biting your hands, clothes, or furniture", "Whining, pacing, and never settling down", "Jumping on guests and family members", "Acting anxious, restless, or out of control"];
+
+const painPoints = [
+  "Biting your hands, clothes, or furniture",
+  "Whining, pacing, and never settling down",
+  "Jumping on guests and family members",
+  "Acting anxious, restless, or out of control",
+];
+
 const PuppyBitingPage = () => {
-  return <article className="min-h-screen bg-gradient-to-b from-orange-50/50 to-white">
-      
+  return (
+    <article className="min-h-screen bg-gradient-to-b from-orange-50/50 to-white">
+
       {/* Header */}
       <header className="py-4 px-4 border-b border-muted/30">
         <div className="max-w-lg mx-auto">
@@ -21,47 +30,63 @@ const PuppyBitingPage = () => {
 
           {/* Headline */}
           <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-3">
-            "My Puppy Wouldn’t Stop Biting — Until I Tried This Simple Brain Game"
-
+            My Puppy Wouldn’t Stop Biting — <strong>Until I Tried This Simple Brain Game</strong>
           </h1>
 
           {/* Subheadline */}
           <p className="text-base sm:text-lg text-muted-foreground mb-6">
-            ​This calm, science-based method helps reduce biting, anxiety, and restless behavior — without yelling or punishment.
-
+            This calm, science-based method helps reduce <strong>biting</strong>,{" "}
+            <strong>anxiety</strong>, and <strong>restless behavior</strong> — without yelling or punishment.
           </p>
 
-          {/* IMAGEM (Agora é o destaque principal e é clicável) */}
-          <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer" className="block mb-6 group relative overflow-hidden rounded-xl shadow-lg">
-            {/* Efeito sutil ao passar o mouse para indicar clique */}
+          {/* Image */}
+          <a
+            href={AFFILIATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block mb-6 group relative overflow-hidden rounded-xl shadow-lg"
+          >
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10" />
-            
-            <img src="/images/puppy-biting.webp" alt="Frustrated dog owner with biting puppy" className="w-full rounded-xl shadow-lg" width="700" height="400" fetchPriority="high" />
+
+            <img
+              src="/images/puppy-biting.webp"
+              alt="Tired of getting bitten by your puppy?"
+              className="w-full rounded-xl shadow-lg"
+              width="700"
+              height="400"
+              fetchPriority="high"
+            />
           </a>
 
           {/* CTA Principal */}
           <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer" className="block w-full">
-            <Button variant="cta" size="xl" className="w-full py-4 px-4 text-sm sm:text-base md:text-lg whitespace-normal text-center leading-snug flex items-center justify-center gap-2">
-              Watch the Full Training Method
+            <Button
+              variant="cta"
+              size="xl"
+              className="w-full py-4 px-4 text-sm sm:text-base md:text-lg whitespace-normal text-center leading-snug flex items-center justify-center gap-2"
+            >
+              See How to Stop the Biting
               <ArrowRight className="w-5 h-5 flex-shrink-0" />
-              </Button>
+            </Button>
           </a>
         </div>
       </section>
 
-      {/* Pain Section - Mantida igual */}
+      {/* Pain Section */}
       <section className="py-6 px-4 bg-white">
         <div className="max-w-lg mx-auto">
           <div className="bg-orange-50/50 rounded-xl p-5 border border-orange-100">
             <p className="text-sm mb-4 font-medium text-center text-muted-foreground">
               Is your puppy driving you crazy with these behaviors?
-
             </p>
+
             <ul className="space-y-3">
-              {painPoints.map((point, index) => <li key={index} className="flex items-center gap-3">
+              {painPoints.map((point, index) => (
+                <li key={index} className="flex items-center gap-3">
                   <AlertCircle className="w-5 h-5 text-red-500 shrink-0" />
                   <span className="text-base text-gray-700">{point}</span>
-                </li>)}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -71,34 +96,37 @@ const PuppyBitingPage = () => {
       <section className="py-8 px-4 pb-16">
         <div className="max-w-lg mx-auto text-center space-y-6">
 
-          <p className="text-lg leading-relaxed text-gray-800">Your puppy isn’t “bad” — their brain is just overstimulated.
-
-          <strong>aggressive</strong> or <strong>stubborn</strong>.
+          <p className="text-lg leading-relaxed text-gray-800">
+            Your puppy isn’t <strong>“bad”</strong> — their brain is just <strong>overstimulated</strong>.
           </p>
 
           <p className="text-lg leading-relaxed text-gray-600">
-            They act out because their brain is <strong className="text-gray-900">overstimulated</strong>,{" "}
-            <strong className="text-gray-900">anxious</strong>, or{" "}
-            <strong className="text-gray-900">under-challenged</strong>.
+            When a puppy’s mind is overloaded with <strong className="text-gray-900">energy</strong> and{" "}
+            <strong className="text-gray-900">stress</strong>, biting becomes their way of coping.
           </p>
 
           <p className="text-lg leading-relaxed text-gray-800">
-            Professional trainer <strong className="text-trust-blue">Adrienne Farricelli</strong> uses gentle brain games to mentally engage dogs, helping them relax, focus, and naturally reduce unwanted behaviors.
+            Professional trainer{" "}
+            <strong className="text-trust-blue">Adrienne Farricelli</strong> teaches{" "}
+            <strong>simple brain games</strong> that calm your puppy’s mind, improve focus, and{" "}
+            <strong>naturally stop problem behaviors</strong>.
           </p>
 
           <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer" className="block w-full pt-4">
             <Button variant="cta" size="xl" className="w-full py-4 text-base shadow-lg">
-              Watch the Full Training Method
+              Watch the Free Training Video
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </a>
 
           <p className="text-xs text-muted-foreground pt-2">
-            Free video reveals a calm, science-based approach
+            See how to stop the biting starting today
           </p>
 
         </div>
       </section>
-    </article>;
+    </article>
+  );
 };
+
 export default PuppyBitingPage;
