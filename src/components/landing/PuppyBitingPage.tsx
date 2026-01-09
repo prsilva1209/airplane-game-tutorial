@@ -72,9 +72,26 @@ const PuppyBitingPage = () => {
           </div>
 
           {/* Video Caption */}
-          <p className="text-sm text-muted-foreground mb-6 sm:mb-8 italic">
+          <p className="text-sm text-muted-foreground mb-4 italic">
             Watch how a simple mental game helps calm anxious dogs and reduce problem behaviors — without punishment.
           </p>
+
+          {/* CTA Button - Above the Fold */}
+          <a
+            href={AFFILIATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full"
+          >
+            <Button
+              variant="cta"
+              size="xl"
+              className="w-full h-auto py-4 text-sm sm:text-base md:text-lg whitespace-normal leading-tight"
+            >
+              Watch the Full Training Method
+              <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0" />
+            </Button>
+          </a>
         </div>
       </section>
 
