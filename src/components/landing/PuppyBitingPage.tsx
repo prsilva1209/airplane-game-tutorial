@@ -31,14 +31,16 @@ const PuppyBitingPage = () => {
         <div className="max-w-lg mx-auto text-center">
 
           <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-3">
-            My Puppy Won’t Stop Biting Me —  
+            My Puppy Won’t Stop Biting Me  
             <br />
-            <span className="text-orange-600">And I Was About to Give Up</span>
+            <span className="text-orange-600">
+              And It Was Ruining My Home
+            </span>
           </h1>
 
           <p className="text-base sm:text-lg text-muted-foreground mb-6">
-            Discover the simple brain-based method that helps calm your puppy and
-            reduce painful biting — without yelling, hitting, or punishment.
+            This simple brain-based method helped calm my puppy and stop the
+            painful biting — without yelling, punishment, or expensive trainers.
           </p>
 
           {/* IMAGE */}
@@ -61,24 +63,23 @@ const PuppyBitingPage = () => {
           </a>
 
           {/* CTA */}
-          <a
-            href={AFFILIATE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full"
-          >
+          <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer">
             <Button
               variant="cta"
               size="xl"
               className="w-full py-4 px-4 text-sm sm:text-base md:text-lg whitespace-normal text-center leading-snug flex items-center justify-center gap-2"
             >
-              See How to Stop the Biting Today
+              Watch the Training That Stops Biting
               <ArrowRight className="w-5 h-5 flex-shrink-0" />
             </Button>
           </a>
 
           <p className="text-sm text-gray-600 mt-3">
-            ⭐⭐⭐⭐⭐ Trusted by <strong>57,000+ dog owners</strong> worldwide
+            ⭐⭐⭐⭐⭐ Trusted by <strong>57,000+ dog owners</strong>
+          </p>
+
+          <p className="text-xs text-muted-foreground mt-1">
+            60-Day Money-Back Guarantee — No Risk
           </p>
 
         </div>
@@ -90,7 +91,7 @@ const PuppyBitingPage = () => {
           <div className="bg-orange-50/50 rounded-xl p-5 border border-orange-100">
 
             <p className="text-sm mb-4 font-medium text-center text-muted-foreground">
-              Does your puppy do any of these?
+              Does this sound like your puppy?
             </p>
 
             <ul className="space-y-3">
@@ -102,27 +103,34 @@ const PuppyBitingPage = () => {
               ))}
             </ul>
 
+            <p className="text-sm text-center text-gray-600 mt-4">
+              If this feels familiar, you’re not alone.
+            </p>
+
           </div>
         </div>
       </section>
 
-      {/* ROOT CAUSE SECTION */}
+      {/* ROOT CAUSE */}
       <section className="py-8 px-4 bg-orange-50/40">
         <div className="max-w-lg mx-auto text-center space-y-5">
 
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-gray-900">
-            The Real Cause Behind Bad Behavior
+            Why Your Puppy Acts This Way
           </h2>
 
           <p className="text-lg leading-relaxed text-gray-800">
-            Whether it's <strong>biting</strong>, <strong>barking</strong>, or <strong>jumping</strong>,  
-            the root cause is the same:
-            <strong> an overstimulated or under-challenged brain.</strong>
+            Whether it’s <strong>biting</strong>, <strong>barking</strong>, or{" "}
+            <strong>jumping</strong>, the real cause is the same:
+          </p>
+
+          <p className="text-lg leading-relaxed font-semibold text-gray-900">
+            An overstimulated and under-challenged brain.
           </p>
 
           <p className="text-lg leading-relaxed text-gray-700">
-            When you engage your dog’s mind the right way,  
-            <strong className="text-gray-900"> the bad behaviors naturally fade away.</strong>
+            When your puppy’s mind is properly engaged, the bad behaviors{" "}
+            <strong className="text-gray-900">naturally fade away.</strong>
           </p>
 
           <div className="bg-white rounded-xl p-5 border border-orange-100 text-left">
@@ -131,21 +139,28 @@ const PuppyBitingPage = () => {
             </p>
 
             <ul className="space-y-2">
-              <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Excessive barking</li>
-              <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Jumping on people</li>
-              <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Restlessness & anxiety</li>
-              <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-600" /> Destructive behavior</li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-600" />
+                Excessive barking
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-600" />
+                Jumping on people
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-600" />
+                Restlessness & anxiety
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-600" />
+                Destructive behavior
+              </li>
             </ul>
           </div>
 
-          <a
-            href={AFFILIATE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full pt-4"
-          >
+          <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer">
             <Button variant="cta" size="xl" className="w-full py-4 text-base shadow-lg">
-              Watch the Full Training Method
+              See How It Works
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </a>
@@ -153,7 +168,7 @@ const PuppyBitingPage = () => {
         </div>
       </section>
 
-      {/* PROOF / AUTHORITY */}
+      {/* AUTHORITY */}
       <section className="py-8 px-4 pb-16">
         <div className="max-w-lg mx-auto text-center space-y-6">
 
@@ -162,31 +177,26 @@ const PuppyBitingPage = () => {
           </p>
 
           <p className="text-lg leading-relaxed text-gray-600">
-            Most behavior issues happen because your puppy’s brain is
-            <strong className="text-gray-900"> overstimulated</strong>,
-            <strong className="text-gray-900"> anxious</strong>, or
-            <strong className="text-gray-900"> under-challenged</strong>.
+            Most behavior problems happen because your puppy’s brain is{" "}
+            <strong className="text-gray-900">overstimulated</strong>,{" "}
+            <strong className="text-gray-900">anxious</strong>, or{" "}
+            <strong className="text-gray-900">under-challenged</strong>.
           </p>
 
           <p className="text-lg leading-relaxed text-gray-800">
             Certified trainer{" "}
             <strong className="text-trust-blue">Adrienne Farricelli</strong>{" "}
-            uses gentle brain games to calm your puppy, improve focus, and
-            naturally reduce bad behavior.
+            created a gentle brain training system that helps puppies calm down,
+            focus better, and behave naturally.
           </p>
 
-          <a
-            href={AFFILIATE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full pt-4"
-          >
+          <a href={AFFILIATE_URL} target="_blank" rel="noopener noreferrer">
             <Button
               variant="cta"
               size="xl"
               className="w-full py-4 text-base shadow-lg"
             >
-              See the Training That Works
+              Start the Training Now
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </a>
@@ -196,7 +206,7 @@ const PuppyBitingPage = () => {
           </p>
 
           <p className="text-xs text-muted-foreground pt-2">
-            Instant access. Start calming your puppy today.
+            Instant access. Calm your puppy starting today.
           </p>
 
         </div>
@@ -206,4 +216,4 @@ const PuppyBitingPage = () => {
   );
 };
 
-export default PuppyBitingPage;
+export default PuppyBitingPage;          
